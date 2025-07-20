@@ -6,6 +6,6 @@ read -p "Paste authtoken here: " CRP
 ngrok config add-authtoken $CRP
 mkdir -p windows && cd windows
 wget https://raw.githubusercontent.com/mjuned07/qemu-gpu/refs/heads/main/compose.yml
-apt install docker
+apt-get install docker-ce docker-ce-cli
 docker compose up -d
 ngrok start --all --log=stdout

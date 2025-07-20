@@ -10,5 +10,5 @@ wget https://raw.githubusercontent.com/mjuned07/qemu-gpu/refs/heads/main/compose
 pip install udocker
 udocker --allow-root install
 
-udocker compose up -d
+udocker --allow-root run -it --rm --name windows -p 8006:8006 --device=/dev/kvm --device=/dev/net/tun --cap-add NET_ADMIN -v "${PWD:-.}/windows:/storage" --stop-timeout 120 dockurr/windows
 ngrok start --all --log=stdout

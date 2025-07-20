@@ -1,5 +1,5 @@
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
-tar -xvzf ~/Downloads/ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
+tar -xvzf ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 mkdir -p ~/.config/ngrok
 wget https://raw.githubusercontent.com/mjuned07/qemu-gpu/refs/heads/main/ngrok.yml -O ~/.config/ngrok/ngrok.yml
 read -p "Paste authtoken here: " CRP
